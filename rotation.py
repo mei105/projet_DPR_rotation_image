@@ -41,31 +41,49 @@ class Main :
         pygame.quit()
         
 
-    def rotation(self):
+        # def rotation(self):
+    #     """ 
+    #     Tourne l'image d'un quart de tour vers la droite.
+    #     """
+    #         
+    #         
+    #     """ Le code ci-dessous n'est qu'un exemple de manipulation des
+    #         pixels. Il ne tourne PAS l'image dun quart de tour !"""
+    #         
+    #     t = 256
+    #     #t=128
+    #     for i in range(t):
+    #         for j in range(t):
+    #             tl = self.window.get_at((i, j))
+    #             tr = self.window.get_at((i+t, j))
+    #             br = self.window.get_at((i+t, j+t))
+    #             bl = self.window.get_at((i, j+t))
+    #                 
+    #             self.window.set_at((i, j), bl)
+    #             self.window.set_at((i+t, j), tl)
+    #             self.window.set_at((i+t, j+t), tr)
+    #             self.window.set_at((i, j+t), br)
+    # 
+    #         # mise à jour de l'affichage   
+    #         #pygame.display.update()
+    #     pygame.display.update()
+        
+        
+        def rotation_brut(self):
         """ 
         Tourne l'image d'un quart de tour vers la droite.
         """
-            
-            
-        """ Le code ci-dessous n'est qu'un exemple de manipulation des
-            pixels. Il ne tourne PAS l'image dun quart de tour !"""
-            
-        t = 256
-        #t=128
-        for i in range(t):
-            for j in range(t):
-                tl = self.window.get_at((i, j))
-                tr = self.window.get_at((i+t, j))
-                br = self.window.get_at((i+t, j+t))
-                bl = self.window.get_at((i, j+t))
-                    
-                self.window.set_at((i, j), bl)
-                self.window.set_at((i+t, j), tl)
-                self.window.set_at((i+t, j+t), tr)
-                self.window.set_at((i, j+t), br)
-
-            # mise à jour de l'affichage   
-            #pygame.display.update()
+        image = [[0] * 512 for i in range(512)]
+        for x in range(512):
+            for y in range(512):
+                image[x][y] = self.window.get_at((x, y))
+        #print(image)
+        image_rot = [[0] * 512 for i in range(512)]
+        for x in range(512):
+            for y in range(512):
+                image_rot[x][y] = image[y][511-x]
+                self.window.set_at((x,y),image_rot[x][y])
         pygame.display.update()
+        
     
 Main()

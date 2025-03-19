@@ -41,33 +41,34 @@ class Main :
         pygame.quit()
         
 
-        # def rotation(self):
-    #     """ 
-    #     Tourne l'image d'un quart de tour vers la droite.
-    #     """
-    #         
-    #         
-    #     """ Le code ci-dessous n'est qu'un exemple de manipulation des
-    #         pixels. Il ne tourne PAS l'image dun quart de tour !"""
-    #         
-    #     t = 256
-    #     #t=128
-    #     for i in range(t):
-    #         for j in range(t):
-    #             tl = self.window.get_at((i, j))
-    #             tr = self.window.get_at((i+t, j))
-    #             br = self.window.get_at((i+t, j+t))
-    #             bl = self.window.get_at((i, j+t))
-    #                 
-    #             self.window.set_at((i, j), bl)
-    #             self.window.set_at((i+t, j), tl)
-    #             self.window.set_at((i+t, j+t), tr)
-    #             self.window.set_at((i, j+t), br)
-    # 
-    #         # mise à jour de l'affichage   
-    #         #pygame.display.update()
-    #     pygame.display.update()
+    def rotation_dpr(self, t,x,y):        
+        """ 
+        Tourne l'image d'un quart de tour vers la droite.
+        Le code ci-dessous n'est qu'un exemple de manipulation des
+        pixels. Il ne tourne PAS l'image dun quart de tour !"""
+            
+        if t>1 :
+
+            self.rotation_dpr(t//2,x+t,y)
+            self.rotation_dpr(t//2,x,y+t) 
+            self.rotation_dpr(t//2,x+t,y+t)
+            self.rotation_dpr(t//2,x,y)
+        for j in range(x,x+t):
+            for i in range(y,y+t):
+                    tl = self.window.get_at((i, j))
+                    tr = self.window.get_at((i+t, j))
+                    br = self.window.get_at((i+t, j+t))
+                    bl = self.window.get_at((i, j+t))
+                    
+                        
+                    self.window.set_at((i, j), bl)
+                    self.window.set_at((i+t, j), tl)
+                    self.window.set_at((i+t, j+t), tr)
+                    self.window.set_at((i, j+t), br)
         
+                # mise à jour de l'affichage   
+                #pygame.display.update()
+        pygame.display.update()
         
         def rotation_brut(self):
         """ 

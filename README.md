@@ -1,5 +1,5 @@
 # Le projet sur le code morse
-<i>Par APET Vlad, CHALENDARD Jao et MICHEL Clément</i> - Terminale<br><br>
+<i>Par APET Vlad, Mathieu et G</i> - Terminale<br><br>
 
 # Précisions préalables
 

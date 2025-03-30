@@ -1,8 +1,9 @@
 # Le projet sur la rotation d'une image
 <i>Par APET Vlad, Mathieu et Gaël</i> - Terminale<br><br>
 
-# Reste à faire :
-4. Tester tout (y compris les cas limites)
+Ce projet présente un programme (console Python) qui permet de tourner une image choisie d'un quart de tour vers la droite ou vers la gauche (selon son choix)
+
+Il a été réalisé avec les bibliothèques Pillow, pygame ainsi que tkinter.
 
 # Précisions préalables
 <ul>
@@ -37,6 +38,7 @@
 <ol>
   <li>Assurez vous d'avoir installé la bibliothèque "pygame". Si vous ne l'avez pas, tapez dans la console : <code>pip install pygame</code> (si vous n'y arrivez pas, consulter la vidéo suivante :  https://youtu.be/-z-bBY6YUVU)</li>
   <li>Vous devez également posséder la bibliothèque Pillow. Pour la télécharger, utiliser la commande <code>pip install Pillow</code> Si vous rencontrez des problèmes, consultez la documentation de Pillow (Source : https://pillow.readthedocs.io/en/stable/).</li>
+  <li>Idem pour la bibliothèque tkinter</li>
   <li>Lancer/Exécuter le fichier <code>rotation.py</code><br></li>
   <li>Choisissez votre image à tourner et le type de rotation souhaité.</li>
   <li>Observer le résultat à travers la fenêtre pygame qui vient de s'ouvrir pour vous.</li>
@@ -45,8 +47,8 @@
 # Limitations éventuelles
 <p>On peut en citer quelques-unes :</p>
 <ol>
-  <li>Votre image doit être <b>carrée</b> (côtés égaux) et dont chaque côté correspond à la <b>puissance de 2</b>. Sinon, si vous le souhaitez, on rogne votre image et on effectue une rotation.</li>
-  <li>La taille de votre image ne doit pas depasser 800x800 (ici en pixels, bien entendu)</li>
+  <li>Votre image doit être <b>carrée</b> (côtés égaux) et chaque côté correspond à la <b>puissance de 2</b>. Sinon, si vous le souhaitez, on rogne votre image et on effectue une rotation.</li>
+  <li>La taille de votre image doit être de 32x32 (au minimum) et ne depassant pas 800x800 (ici la taille en pixels, bien entendu)</li>
   <li>Votre image doit oobligatoirement être de format .png, .jpeg, .jpg</li>
   <li>Fournissez des informations correctes, car toute saisie érronée peut arrêter votre démarche et il faudra recommencer.</li>
 </ol><br>

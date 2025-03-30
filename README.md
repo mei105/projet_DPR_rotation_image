@@ -49,7 +49,7 @@
 <p>On peut en citer quelques-unes :</p>
 <ol>
   <li>Votre image doit être <b>carrée</b> (côtés égaux) et dont chaque côté correspond à la <b>puissance de 2</b>. Sinon, si vous le souhaitez, on rogne votre image et on effectue une rotation.</li>
-  <li>La taille de votre image ne doit pas depasser 1024x1024 (ici en pixels, bien entendu)</li>
+  <li>La taille de votre image ne doit pas depasser 800x800 (ici en pixels, bien entendu)</li>
   <li>Votre image doit oobligatoirement être de format .png, .jpeg, .jpg</li>
   <li>Fournissez des informations correctes, car toute saisie érronée peut arrêter votre démarche et il faudra recommencer.</li>
 </ol><br>

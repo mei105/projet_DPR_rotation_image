@@ -1,7 +1,7 @@
 # Le projet sur le code morse
 <i>Par APET Vlad, Mathieu et Gaël</i> - Terminale<br><br>
 
-# Resre à faire :
+# Reste à faire :
 1. Completer le fichier du tp avec tout ce qui a été fait jusqu'au moment présent. (pour que le prof puisse se repérer faciliment dans le fichier main.py)
 2. Répondre à la question 2 (C'est O(n^2) décidément)
 3. Vérifier la conformité aux exigeances de l'énoncé (pronote et tp)

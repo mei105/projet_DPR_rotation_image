@@ -2,7 +2,7 @@
 <i>Par APET Vlad, Mathieu et Gaël</i> - Terminale<br><br>
 
 # Reste à faire :
-1. Completer le fichier du tp avec tout ce qui a été fait jusqu'au moment présent. (pour que le prof puisse se repérer faciliment dans le fichier rotation.py)
+1. Completer le fichier du tp avec tout ce qui a été fait jusqu'au moment présent. (pour que le prof puisse se repérer faciliment dans le fichier <code>rotation.py</code>)
 2. Répondre à la question 2 (C'est O(n^2) décidément)
 3. Vérifier la conformité aux exigeances de l'énoncé (pronote et tp)
 4. Tester tout (y compris les cas limites)
@@ -40,7 +40,7 @@
 <ol>
   <li>Assurez vous d'avoir installé la bibliothèque "pygame". Si vous ne l'avez pas, tapez dans la console : <code>pip install pygame</code> (si vous n'y arrivez pas, consulter la vidéo suivante :  https://youtu.be/-z-bBY6YUVU)</li>
   <li>Vous devez également posséder deux bibliothèques (telles Pillow et exifread). Pour les télécharger, utiliser la commande <code>pip install Pillow</code> et <code>pip install exifread</code> Si vous rencontrez des problèmes, consultez la documentation de <a href="https://pillow.readthedocs.io/en/stable/" target="new">Pillow</a> et <a href="https://pypi.org/project/ExifRead/" target="new">ExifRead</a>.</li>
-  <li>Lancer/Exécuter le fichier rotation.py<br></li>
+  <li>Lancer/Exécuter le fichier <code>rotation.py</code><br></li>
   <li>Choisissez votre image à tourner et le type de rotation souhaité.</li>
   <li>Observer le résultat à travers la fenêtre pygame qui vient de s'ouvrir pour vous.</li>
 </ol><br>

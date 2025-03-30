@@ -12,8 +12,9 @@ def choisir_image():
     :return: Le chemin qui mène à une image choisie. (de type str)
     """
     root = tk.Tk()
-    root.withdraw()  # Cacher la fenêtre principale de Tkinter
+    # root.withdraw()  # Cacher la fenêtre principale de Tkinter
     file_path = filedialog.askopenfilename(filetypes=[("Images", "*.png;*.jpg;*.jpeg")])
+    root.destroy()
     return file_path
 
 
@@ -28,6 +29,15 @@ def verification_taille(fichier_chemin):
     condition = False
     with Image.open(fichier_chemin) as img:
         taille = img.size
+        if taille[0] < 32 or taille[1] < 32:
+            print("\nVotre image n'est pas suffisamment grande pour être retournable, voire visible."
+                  " Essayez de fournir des images de taille supérieure à 32x32")
+            pygame.quit()
+            exit()
+        if taille[0] > 800 or taille[1] > 800:
+            print("\nVotre image est trop grande. Essayez de fournir une image de taille inférieure à 800x800")
+            pygame.quit()
+            exit()
         if taille[0] == taille[1]:
             log2_cote = math.log2(taille[0])
             # log2_cote sert à rogner l'image (si l'on veut la tourner
@@ -46,6 +56,21 @@ def verification_taille(fichier_chemin):
                 return condition, log2_cote
 
 
+def numeric_input_verification(user_input):
+    """Elle sert essentiellement à vérifier si l'utilisateur utilise que des nombres
+
+    :param user_input: La saisie de l'utilisateur (de type str)
+    :return: user_input converti en nombre entier (s'il ne présente que des nombres),
+    sinon, on arrête le programme et affiche le message d'erreur dans la console.
+    """
+    if user_input.isnumeric():
+        return int(user_input)
+    else:
+        print("ERROR. Nous ne pouvons pas accepter votre saisie,"
+              "essayez de n'utiliser que deux nombre: 0 ou 1")
+        pygame.quit()
+
+
 class Main:
 
     def __init__(self):
@@ -55,23 +80,29 @@ class Main:
         # initialisation de pygame
         pygame.init()
         print("Bonjour !")
-        user_choice = int(input("\nCe programme vous permet de tourner une image à votre choix, "
-                                "voulez-vous poursuivre ? Saisissez 1 pour continuer ou 0 pour s\'arrêter."))
+        user_choice = numeric_input_verification(input("\nCe programme vous permet de tourner une image "
+                                                       "à votre choix, voulez-vous poursuivre ? "
+                                                       "Saisissez 1 pour continuer ou 0 pour s'arrêter."))
+
         if user_choice == 1:
-            sens_rotation = int(input("\nQuelle rotation voulez-vous effectuer ? "
-                                      "(1 pour la rotation d'un quart de tour vers la droite, "
-                                      "0 pour la rotation gauche)"))
+            sens_rotation = numeric_input_verification(input("\nQuelle rotation voulez-vous effectuer ? "
+                                                             "(1 pour la rotation d'un quart de tour vers la droite, "
+                                                             "0 pour la rotation gauche)"))
             pygame.time.wait(1000)
             if sens_rotation not in (0, 1):
                 print("Saisie erronée. Veuillez recommencer.")
                 pygame.quit()
                 exit()
-            user_choice = int(input("\nMaintenant, veuillez choisir votre image. "
-                                    "Attention, seuls les formats .png, .jpeg et .jpg sont acceptés "
-                                    "\nVotre image ne doit pas dépasser la taille 800x800"
-                                    " et elle doit être (dans la mesure du possible) carrée"
-                                    "\nPuis, sachez que chaque côté doit être une puissance de 2."
-                                    "Souhaitez-vous continuer ? (1 pour continuer, 0 pour s'arrêter)"))
+            user_choice = numeric_input_verification(input("\nMaintenant, veuillez choisir votre image. "
+                                                           "Attention, seuls les formats .png, .jpeg "
+                                                           "et .jpg sont acceptés \nVotre image doit avoir "
+                                                           "une taille de 32x32 (minimum) et elle ne doit pas "
+                                                           "dépasser la taille 800x800. Elle doit aussi être "
+                                                           "(dans la mesure du possible) carrée"
+                                                           "\nEnfin, sachez que chaque côté doit être "
+                                                           "une puissance de 2..."
+                                                           "Souhaitez-vous continuer ? "
+                                                           "(1 pour continuer, 0 pour s'arrêter)"))
             if user_choice == 1:
                 pygame.time.wait(1000)
                 # affichage de l'image
@@ -82,7 +113,7 @@ class Main:
                     taille_correcte, log2_cote = verification_taille(fichier_chemin)
                     if taille_correcte:
                         print("\nVotre rotation a été effectuée avec succès.")
-                        self.window = pygame.display.set_mode((800, 800))
+                        self.window = pygame.display.set_mode((800, 800), DOUBLEBUF)
                         image = pygame.image.load(fichier_chemin)
                         self.window.blit(image, (0, 0))
                         pygame.display.update()
@@ -92,19 +123,20 @@ class Main:
                         # maintien de la fenêtre
                         self.hold()
                     else:
-                        user_choice = int(input("\nLa taille de votre image ne respecte pas toutes les consignes, "
-                                                "mais on peut toujours la tourner à condition qu'elle soit rognée."
-                                                "Voulez-vous continuer ? (tapez 1 pour oui, "
-                                                "sinon tapez 0 ou tout autre caractère pour qu'on s'arrête.)"))
+                        user_choice = numeric_input_verification(
+                            input("\nLa taille de votre image ne respecte pas toutes les consignes, "
+                                  "mais on peut toujours la tourner à condition qu'elle soit rognée."
+                                  "Voulez-vous continuer ? (tapez 1 pour oui, "
+                                  "sinon tapez 0 ou tout autre caractère pour qu'on s'arrête.)"))
                         if user_choice == 1:
                             print("\nVotre image a été rognée et la rotation a été effectuée avec succès.")
-                            self.window = pygame.display.set_mode((800, 800))
+                            self.window = pygame.display.set_mode((800, 800), DOUBLEBUF)
                             image = pygame.image.load(fichier_chemin)
                             # On rogne l'image...
                             self.window.fill((0, 0, 0))
                             pygame.display.update()
-                            surface_rognee = self.window.subsurface((0, 0, (2 ** int(log2_cote)), (2 ** int(log2_cote))))
-                            surface_rognee.blit(image, (0, 0))
+                            surface_rogne = self.window.subsurface((0, 0, (2 ** int(log2_cote)), (2 ** int(log2_cote))))
+                            surface_rogne.blit(image, (0, 0))
                             pygame.display.update()
                             # rotation de l'image
                             self.rotation_dpr(0, 0, (2 ** int(log2_cote)) // 2, sens_rotation)

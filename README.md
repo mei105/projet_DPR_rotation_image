@@ -1,4 +1,4 @@
-# Le projet sur la méthode Diviser Pour (mieux) Régner qui s'applique à la rotation d'une image
+# Le projet sur la rotation d'une image
 <i>Par APET Vlad, Mathieu et Gaël</i> - Terminale<br><br>
 
 # Reste à faire :

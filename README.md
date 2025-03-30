@@ -49,7 +49,7 @@
 <p>On peut en citer quelques-unes :</p>
 <ol>
   <li>Votre image doit être <b>carrée</b> (côtés égaux) et dont chaque côté correspond à la <b>puissance de 2</b>. Sinon, si vous le souhaitez, on rogne votre image et on effectue une rotation.</li>
-  <li>La taille de votre image ne doit pas depasser 1000x1000 (ici en pixels, bien entendu)</li>
+  <li>La taille de votre image ne doit pas depasser 1024x1024 (ici en pixels, bien entendu)</li>
   <li>Votre image doit oobligatoirement être de format .png, .jpeg, .jpg</li>
   <li>Fournissez des informations correctes, car toute saisie érronée peut arrêter votre démarche et il faudra recommencer.</li>
 </ol><br>
@@ -57,5 +57,5 @@
 # Améliorations envisageables 
 <ol>
   <li>On pourrait éventuellement ne pas rogner l'imager et la tourner </li>
-  <li>C'est avec plaisir qu'on aurait pu aller encore plus loin que l'énoncé et développer une interface via la fenêtre pygame (et non pas la console), en faisant attention à la taille des boutons, ainsi qu'à leur placement et celui de l'image, par exemple.</li>
+  <li>C'est avec plaisir qu'on aurait pu aller encore plus loin que l'énoncé et développer une interface via la fenêtre pygame (et non pas la console), en faisant attention à la taille des boutons, ainsi qu'à leur placement et celui de l'image, par exemple. (Mais ceci est envisageable que lorsque les co-équipiers <b>principaux</b> ne passent pas déjà énormement de concours et peuvent donc réaliser de tels ajouts)</li>
 </ol><br>

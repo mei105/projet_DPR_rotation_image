@@ -8,6 +8,7 @@ Il a été réalisé avec les bibliothèques Pillow, pygame ainsi que tkinter.
 # Précisions préalables
 <ul>
   <li>Les réponses aux questions de l'énoncé du projet 1 se trouvent directement dans le fichier <code>rotation.py</code> et sont indiquées par les commentaires.</li>
+  <li>Vous ne pouvez retourner votre image qu'une seule fois.</li>
 </ul>
 
 # Répartition des tâches & Lancement

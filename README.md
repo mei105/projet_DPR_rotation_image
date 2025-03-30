@@ -39,7 +39,7 @@
 # Comment lancer le programme?
 <ol>
   <li>Assurez vous d'avoir installé la bibliothèque "pygame". Si vous ne l'avez pas, tapez dans la console : <code>pip install pygame</code> (si vous n'y arrivez pas, consulter la vidéo suivante :  https://youtu.be/-z-bBY6YUVU)</li>
-  <li>Vous devez également posséder la bibliothèque Pillow. Pour la télécharger, utiliser la commande <code>pip install Pillow</code> Si vous rencontrez des problèmes, consultez la documentation de <a href="https://pillow.readthedocs.io/en/stable/" target="new">Pillow (Source : https://pillow.readthedocs.io/en/stable/).</li>
+  <li>Vous devez également posséder la bibliothèque Pillow. Pour la télécharger, utiliser la commande <code>pip install Pillow</code> Si vous rencontrez des problèmes, consultez la documentation de <a href="https://pillow.readthedocs.io/en/stable/" target="new">Pillow</a> (Source : https://pillow.readthedocs.io/en/stable/).</li>
   <li>Lancer/Exécuter le fichier <code>rotation.py</code><br></li>
   <li>Choisissez votre image à tourner et le type de rotation souhaité.</li>
   <li>Observer le résultat à travers la fenêtre pygame qui vient de s'ouvrir pour vous.</li>

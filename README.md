@@ -50,12 +50,12 @@ Il a été réalisé avec les bibliothèques Pillow, pygame ainsi que tkinter.
 <ol>
   <li>Votre image doit être <b>carrée</b> (côtés égaux) et chaque côté correspond à la <b>puissance de 2</b>. Sinon, si vous le souhaitez, on rogne votre image et on effectue une rotation.</li>
   <li>La taille de votre image doit être de 32x32 (au minimum) et ne depassant pas 800x800 (ici la taille en pixels, bien entendu)</li>
-  <li>Votre image doit oobligatoirement être de format .png, .jpeg, .jpg</li>
+  <li>Votre image doit obligatoirement être de format .png, .jpeg, .jpg</li>
   <li>Fournissez des informations correctes, car toute saisie érronée peut arrêter votre démarche et il faudra recommencer.</li>
 </ol><br>
 
 # Améliorations envisageables 
 <ol>
   <li>Si l'énoncé ne le nécessitait pas, on aurait pu ne pas rogner l'imager et la tourner par la méthode de force brute (pixel par pixel) et non pas selon la méthode DPR.</li>
-  <li>C'est avec plaisir qu'on aurait pu également aller encore plus loin et sortir du cadre de l'énoncé, en développant une interface pygame (et non pas la console), <br>en faisant bien sûr attention à la taille des boutons, ainsi qu'à leur placement et celui de l'image, par exemple. <br>(Mais ceci est envisageable que lorsque les coéquipiers <b>principaux</b> ne passent pas déjà énormement de concours et peuvent donc réaliser de tels ajouts)</li>
+  <li>C'est avec plaisir qu'on aurait pu également aller encore plus loin et sortir du cadre de l'énoncé, en développant une interface pygame (et non pas la console), <br>en faisant bien sûr attention à la taille des boutons, ainsi qu'à leur placement et celui de l'image, par exemple. <br>Mais ceci est envisageable que lorsque les coéquipiers <b>principaux</b> ne passent pas déjà énormement de concours et peuvent donc réaliser de tels ajouts</li>
 </ol><br>

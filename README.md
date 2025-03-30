@@ -57,5 +57,5 @@
 # Améliorations envisageables 
 <ol>
   <li>On pourrait éventuellement ne pas rogner l'imager et la tourner </li>
-  <li>C'est avec plaisir qu'on aurait pu aller encore plus loin que l'énoncé et développer une interface via la fenêtre pygame (et non pas la console), en faisant attention à la taille des boutons, ainsi qu'à leur placement et celui de l'image, par exemple. (Mais ceci est envisageable que lorsque les co-équipiers <b>principaux</b> ne passent pas déjà énormement de concours et peuvent donc réaliser de tels ajouts)</li>
+  <li>C'est avec plaisir qu'on aurait pu aller encore plus loin que l'énoncé et développer une interface via la fenêtre pygame (et non pas la console), en faisant attention à la taille des boutons, ainsi qu'à leur placement et celui de l'image, par exemple. (Mais ceci est envisageable que lorsque les coéquipiers <b>principaux</b> ne passent pas déjà énormement de concours et peuvent donc réaliser de tels ajouts)</li>
 </ol><br>
